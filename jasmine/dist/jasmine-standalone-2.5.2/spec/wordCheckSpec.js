@@ -20,7 +20,7 @@ describe("Word Checker Testing", function() {
 		expect(verifyAlphaNumeric).toBeDefined();
 	});
 
-	it("verifyAlphaNumeric should return false if there are any non-alphanumeric characters in a string", function(){
+	it("verifyAlphaNumeric should return false if there are any non-alphanumeric characters in a string", function() {
 		expect(duplicateCheck(wordArr)).toBeFalsy();
 	})
 });
