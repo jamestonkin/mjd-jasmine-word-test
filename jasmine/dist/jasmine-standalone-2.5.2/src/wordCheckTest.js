@@ -3,15 +3,15 @@
 var button = document.getElementById('sub-btn');
 var inputText;
 
-function checkWordCount(words) {
-  if (words.length > 100);
+function checkWordCount(wordArr) {
+  if (wordArr.length > 100);
   return false;
 };
 
-function duplicateCheck(words) {
+function duplicateCheck(wordArr) {
   var counts={};
-  for (var i = 0; i < words.length; i++) {
-    var item = words[i];
+  for (var i = 0; i < wordArr.length; i++) {
+    var item = wordArr[i];
     counts[item] = counts[item] >= 1 ? counts[item] + 1 : 1;
     if (counts[item] === 2) {
       return false;
@@ -19,20 +19,18 @@ function duplicateCheck(words) {
   }
 };
 
-function verifyAlphaNumeric(words) {
-  function verifyAlphaNumeric(words){
-	for (var i = 0; i < words.length; i++){
-		if (words[i] !== /^[a-z0-9]+$/i) {
+function verifyAlphaNumeric(wordArr) {
+	for (var i = 0; i < wordArr.length; i++) {
+		if (wordArr[i] !== /^[a-z0-9]+$/i) {
 			return false;
 		}
 	}
 };
 
-
 button.addEventListener('click', function() {
   inputText = getElementById('some-text').value();
-  let words = inputText.split(' ');
-  checkWordCount(words);
-  duplicateCheck(words);
-  verifyAlphaNumeric(words);
+  let wordArr = inputText.split(' ');
+  checkWordCount(wordArr);
+  duplicateCheck(wordArr);
+  verifyAlphaNumeric(wordArr);
 };
