@@ -1,7 +1,7 @@
 # mjd-jasmine-word-test
  NSS Modern JavaScript Developer Jasmine Testing Exercise 1.
 
- ##Word Checker Testing
+ ## Word Checker Testing
 
  You are going to use these concepts to build a JavaScript application that fulfills the following requirements. Check out all of the possible uses of the expect function to meet the requirements.
 
